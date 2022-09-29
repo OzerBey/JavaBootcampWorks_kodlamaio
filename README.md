@@ -45,6 +45,8 @@ En temel class (sınıf) object sınıfıdır diğer bütün sınıfların atas�
 
 </details>
 
+- [classes](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampLessons/oop/classes/src)
+- [static & inner class](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampLessons/oop/staticDemo/src/staticDemo)
 <hr>
 
 # OOP introduction
@@ -71,6 +73,9 @@ Java'daki OOP kavramları, Java'nın Nesne Yönelimli Programlamasının arkası
 
 </details>
 
+- [OOP intro](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampLessons/oop/oopIntro/src/oopIntro)
+- [Fields and Attributes](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampLessons/oop/fieldsAndAttribute/src/classesWithAttributes)
+- [Value and Reference Types](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampLessons/oop/classes/src/classes/valueAndReferenceTypes)
 <hr>
 
 # Inheritance
@@ -96,6 +101,8 @@ Extends: Herhangi bir sınıfın özelliklerini ve işlevlerini miras olarak alm
 
 </details>
 
+- [Basic inheritance example](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampLessons/oop/inheritance/src/inheritance)
+- [Inheritance and method override](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampLessons/oop/inheritance/src/inheritance2)
 <hr>
 
 # Polymorphism
@@ -239,6 +246,8 @@ Kampa katildiniz
 
 * Bir biriyle yakın ilişkisi olmayan / olmadığı halde arayüzünü geliştirecek sınıflar oluşturulmak istenildiğinde
 
+</details>
+
 <hr>
   
 # Lectures
@@ -254,4 +263,4 @@ Kampa katildiniz
   
 # Licence
 
-[MIT](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/LICENCE.txt)
+[MIT](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/blob/master/LICENCE.txt)
