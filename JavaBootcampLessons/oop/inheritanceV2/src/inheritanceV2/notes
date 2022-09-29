@@ -1,0 +1,3 @@
+tr_
+	VIN (very important note): "Birbirinin alternatifi olan kod blogları if ile yönetilmez"
+	Bir iş yapan sınıf başka bir iş yapan sınıfı kullancaksa asla somut (iş yapan sınıflar) sınıftan newlenmez  (!) yapılıyorsa bağımlı olur 
