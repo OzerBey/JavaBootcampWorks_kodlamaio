@@ -3,15 +3,18 @@ package week3_homework2.business.concretes;
 import java.util.List;
 
 import week3_homework2.business.abstracts.ICategoryService;
+import week3_homework2.core.logging.ILogger;
 import week3_homework2.dataAccess.abstracts.ICategoryDao;
 import week3_homework2.entities.concretes.Category;
 
 public class CategoryManager implements ICategoryService {
 
 	private ICategoryDao categoryDao;
+	private List<ILogger> loggers;
 
-	public CategoryManager(ICategoryDao categoryDao) {
+	public CategoryManager(ICategoryDao categoryDao, List<ILogger> loggers) {
 		this.categoryDao = categoryDao;
+		this.loggers = loggers;
 	}
 
 	// Business rules write here
@@ -24,6 +27,9 @@ public class CategoryManager implements ICategoryService {
 			}
 		}
 		categoryDao.add(category);
+		for (ILogger logger : loggers) {
+			logger.log("that " + category.getName() + " added ");
+		}
 	}
 
 	public List<Category> getAll() {

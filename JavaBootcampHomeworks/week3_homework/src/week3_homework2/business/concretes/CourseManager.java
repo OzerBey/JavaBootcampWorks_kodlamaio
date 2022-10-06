@@ -3,15 +3,18 @@ package week3_homework2.business.concretes;
 import java.util.List;
 
 import week3_homework2.business.abstracts.ICourseService;
+import week3_homework2.core.logging.ILogger;
 import week3_homework2.dataAccess.abstracts.ICourseDao;
 import week3_homework2.entities.concretes.Course;
 
 public class CourseManager implements ICourseService {
 
 	private ICourseDao courseDao;
+	private List<ILogger> loggers;
 
-	public CourseManager(ICourseDao courseDao) {
+	public CourseManager(ICourseDao courseDao, List<ILogger> loggers) {
 		this.courseDao = courseDao;
+		this.loggers = loggers;
 	}
 
 	// Business rules write here
@@ -28,6 +31,9 @@ public class CourseManager implements ICourseService {
 			}
 		}
 		courseDao.add(course);
+		for (ILogger logger : loggers) {
+			logger.log("that " + course.getName() + " added ");
+		}
 	}
 
 	public List<Course> getAll() {
