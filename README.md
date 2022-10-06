@@ -258,7 +258,11 @@ Kampa katildiniz
 <hr>
   
 # Homeworks
- `Coming soon..`
+
+  - Week3
+  
+	- [Homework1](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampHomeworks/week3_homework/src/week3_homework)
+	- [Homework2](https://github.com/OzerBey/JavaBootcampWorks_kodlamaio/tree/master/JavaBootcampHomeworks/week3_homework/src/week3_homework2)
 <hr>
   
 # Licence
