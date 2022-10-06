@@ -1,5 +1,8 @@
 package week3_homework.example2;
 
+import week3_homework.example2.CreditExample.ICreditService;
+import week3_homework.example2.CreditExample.MilitaryCredit;
+
 public class Main {
 
 	// MAIN //
@@ -10,7 +13,7 @@ public class Main {
 
 		// Customer process
 		Customer customerOzer = new Customer(1, "Yasin", "Özer", "0123456789");
-		CustomerManager customerManager = new CustomerManager(customerOzer);
+		CustomerManager customerManager = new CustomerManager(customerOzer, new MilitaryCredit());
 		customerManager.save();
 		customerManager.delete();
 
@@ -27,6 +30,8 @@ public class Main {
 	}
 
 	static class Customer {
+
+		// Attributes | Fields of Customer
 		private int id;
 		private String firstName;
 		private String lastName;
@@ -76,9 +81,11 @@ public class Main {
 
 	static class CustomerManager {
 		private Customer customer;
+		private ICreditService creditService;
 
-		public CustomerManager(Customer customer) {
+		public CustomerManager(Customer customer, ICreditService creditService) {
 			this.customer = customer;
+			this.creditService = creditService;
 		}
 
 		public void save() {

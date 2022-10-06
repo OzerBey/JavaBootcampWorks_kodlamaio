@@ -1,6 +1,6 @@
 package week3_homework.example2.CreditExample;
 
-public class TeacherCredit implements ICreditService {
+public class TeacherCredit extends BaseCreditManager {
 
 	@Override
 	public void calculate() {
@@ -10,8 +10,8 @@ public class TeacherCredit implements ICreditService {
 
 	@Override
 	public void save() {
-		System.out.println("Teacher credit saved..");
-
+		System.out.println("This area can use extra process for teacher credits");
+		super.save();
 	}
 
 }

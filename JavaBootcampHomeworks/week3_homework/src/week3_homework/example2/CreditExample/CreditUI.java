@@ -20,7 +20,7 @@ public class CreditUI {
 		boolean isExit = false;
 		while (!isExit) {
 			System.out.println(
-					"------UI-----\nEnter a number for\n Military credit (1)\n Teacher credit (2)\n Farmer credit (3)\n all credits (4)");
+					"------UI-----\nEnter a number for\n Military credit (1)\n Teacher credit (2)\n Farmer credit (3)\n all credits (4)\n Exit for press (5)");
 			int input = scan.nextInt();
 			switch (input) {
 			case 1:
@@ -40,8 +40,10 @@ public class CreditUI {
 					credit.calculate();
 				}
 				break;
+			case 5:
+				isExit = true;
+				break;
 			default:
-				isExit = false;
 				throw new IllegalArgumentException("Unexpected value: " + input + " please enter valid value");
 			}
 		}
