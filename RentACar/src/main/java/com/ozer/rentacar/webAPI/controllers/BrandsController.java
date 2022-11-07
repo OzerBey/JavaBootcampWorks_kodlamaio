@@ -1,16 +1,15 @@
 package com.ozer.rentacar.webAPI.controllers;
 
 import com.ozer.rentacar.business.abstracts.IBrandService;
-import com.ozer.rentacar.entities.concretes.Brand;
+import com.ozer.rentacar.business.requests.CreateBrandRequest;
+import com.ozer.rentacar.business.responses.GetAllBrandResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/brands/")
+@RequestMapping("/api/brands")
 public class BrandsController {
 
     IBrandService brandService;
@@ -20,8 +19,14 @@ public class BrandsController {
         this.brandService = brandService;
     }
 
-    @GetMapping("getAll")
-    public List<Brand> getAll() {
+
+    @PostMapping
+    public void add(@RequestBody CreateBrandRequest brand) {
+        brandService.add(brand);
+    }
+
+    @GetMapping
+    public List<GetAllBrandResponse> getAll() {
         return brandService.getAll();
     }
 }

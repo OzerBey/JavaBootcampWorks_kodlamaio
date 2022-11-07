@@ -1,10 +1,7 @@
 package com.ozer.rentacar.dataAccess.abstracts;
 
 import com.ozer.rentacar.entities.concretes.Brand;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface IBrandRepository {
-    List<Brand> getAll();
+public interface IBrandRepository extends JpaRepository<Brand, Integer> {
 }

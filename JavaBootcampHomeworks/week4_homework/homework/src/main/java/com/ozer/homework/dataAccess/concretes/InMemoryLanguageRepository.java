@@ -48,12 +48,7 @@ public class InMemoryLanguageRepository implements ILanguageRepository {
 
     @Override
     public Language getById(int id) {
-        for (Language item : languages) {
-            if (item.getId() == id) {
-                return item;
-            }
-        }
-        return null;
+        return languages.stream().filter(item -> item.getId() == id).findFirst().get();
     }
 
     @Override
