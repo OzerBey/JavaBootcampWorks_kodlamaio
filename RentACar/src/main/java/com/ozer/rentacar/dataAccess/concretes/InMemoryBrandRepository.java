@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class InMemoryBrandRepository implements IBrandRepository {
+public class InMemoryBrandRepository { //implements IBrandRepository
 
-    List<Brand> brands;
+    List<Brand> brands; // fake DB
 
     public InMemoryBrandRepository() {
         brands = new ArrayList<>();
@@ -19,10 +19,5 @@ public class InMemoryBrandRepository implements IBrandRepository {
         brands.add(new Brand(3, "Audi"));
         brands.add(new Brand(4, "Volvo"));
         brands.add(new Brand(5, "Renault"));
-    }
-
-    @Override
-    public List<Brand> getAll() {
-        return brands;
     }
 }
